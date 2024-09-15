@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Wix+Madefor+Display:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: 'Calligraph';
+    src: url(../fonts/calligraphRegular.ttf);
+}
+
+html{
+    box-sizing: border-box;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+html,body{
+    height: 100%;
+}
+body {
+	font-family: 'Wix Madefor Display';
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 30px;
+    font-style:normal;
+    color: $color-text;
+}
+
+.wrapper{
+    position: relative;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+header{
+    position: sticky;
+    top:0;
+    z-index: 100;
+}
+main{
+    flex-grow: 1;
+}
+.container{
+    padding: 0 10px;
+    max-width: 1580px;
+    margin: 0 auto;
+}
+.social-list{
+    display: flex;
+    gap: 31px;
+    @include mediaPhone{
+		gap: 10px;
+	}
+}
+.title{
+    font-family: 'Calligraph',sans-serif;
+	font-size: 128px;
+    color: $color-accent;
+	font-weight: 5;
+    position: relative;
+	line-height: 138px;
+    &::before{
+        content: '';
+        position: absolute;
+        background-image: url(../images/title-dec.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        height: 43px;
+        width: 109px;
+        bottom: -22px;
+        left: 12px;
+    }
+    @include mediaLaptop{
+        font-size: 100px;
+    }
+}
+.logo-bg {
+	color: rgba(29, 29, 29, 0.6);
+	position: absolute;
+	font-family: 'Calligraph', sans-serif;
+	font-size: 220px;
+	font-weight: 5;
+	line-height: 238px;
+    @include mediaMiniLaptop {
+        font-size: 150px;
+    }
+}

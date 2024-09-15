@@ -1,0 +1,34 @@
+@mixin cart__before-bg {
+	position: absolute;
+	display: block;
+	width: 100%;
+    height: 1000px;
+	top: -0px;
+    right: 0px;
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: 0 0;
+    background-position: top right;
+	z-index: -1;
+}
+
+@mixin mediaLaptop{
+	 @media screen and (max-width:$laptop-width){
+        @content;
+    }
+}
+@mixin mediaMiniLaptop{
+	 @media screen and (max-width:$mini-laptop-width){
+        @content;
+    }
+}
+@mixin mediaTablet{
+	 @media screen and (max-width:$tablet-width){
+        @content;
+    }
+}
+@mixin mediaPhone{
+	 @media screen and (max-width:$phone-width){
+        @content;
+    }
+}

@@ -1,0 +1,64 @@
+header {
+	position: fixed;
+	backdrop-filter: blur(12px);
+	background: rgba(0, 0, 0, 0.3);
+	right: 0;
+	left: 0;
+}
+.header__inner {
+	display: flex;
+	// margin: 8px 0 ;
+	gap: 34px;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 85px;
+
+	span {
+		height: 2px;
+		background-color: $color-text;
+		width: 100%;
+		@include mediaTablet {
+			display: none;
+		}
+	}
+	.logo-link {
+		.logo {
+			padding-left: 12px;
+			@include mediaPhone {
+				padding-left: 6px;
+				max-height: 35px;
+				margin: auto 0;
+			}
+		}
+		@include mediaPhone {
+			max-height: 35px;
+		}
+	}
+	.header__socials-list {
+		@include mediaPhone {
+			gap: 10px;
+			max-height: 15px;
+		}
+	}
+	@include mediaPhone {
+		min-height: 51px;
+	}
+}
+.header__socials-list {
+	@include mediaPhone {
+		padding-right: 16px;
+	}
+}
+.header__socials-item {
+	@include mediaPhone {
+		position: relative;
+		width: 15px;
+		height: 15px;
+	}
+}
+.header__socials-img {
+	@include mediaPhone {
+		position: absolute;
+		max-height: 15px;
+	}
+}
